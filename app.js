@@ -3,13 +3,11 @@ let input = document.getElementById("taskInput");
 const addBtn = document.querySelector("#push")
 let out1 = document.getElementById('output1');
 
+let deleteItem = document.getElementById('delete');
+
 console.log(input.value);
 
-// document.querySelector('#push').onclick = function(){
-//     if(document.querySelector('#taskInput input').value.length == 0){
-//         alert("Please Enter a Task")
-//     }
-
+//add new task
 function output() {
     document.querySelector('#tasks').innerHTML += 
     `<div id="tasks"> 
@@ -18,14 +16,19 @@ function output() {
             <img id="tick" src="/images/right.png">
             ${input.value}
             </p>
-            <img id="delete" src="/images/cancel.png">
+            <img id="deleteItem" src="/images/cancel.png">
         </div>
         </div>
         `;
-    
-//     out1.append(
-//         '<div><input type="text" name="text[]"/><a href="#" class="delete">delete</a></div>'); //adding new input field
-//     console.log("button clicked");
  }
 
+ //delete task
+deleteItem.addEventListener("click", function deleteTask() {
+    console.log("hello there delete task")
+} )
+
+
+
+
 addBtn.addEventListener("click", output);
+//
