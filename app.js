@@ -20,18 +20,21 @@ function addTodo(todo) {
     //This is the list element which is containing the output which is done for every todo element
     let ul = document.querySelector('ul');
     let li = document.createElement('li');
+    
     //The output consists of the todo text, a check button and a delete button.
     li.innerHTML = `
         <span class="todo-item">${todo}</span>
-        <button name="checkButton"><i class="fas fa-check-square"></i></button>
+         <button name="checkButton"><i class="fas fa-check-square"></i></button>
         <!--- <button name="checkButton"> <i class="fa-regular fa-square"></i> --->
         <button name="deleteButton" ><i class="fas fa-trash"></i></button>
     `;
+    
    //new li element is added as a child to the ul element, so that it becomes visible in the browser
     li.classList.add('todo-list-item');
     ul.appendChild(li);
 }
 
+//event handlers for buttons
 function handleClickDeleteOrCheck(e) {
     if (e.target.name == 'checkButton')
         checkTodo(e);
@@ -48,12 +51,13 @@ function checkTodo(e) {
     if (item.style.textDecoration == 'line-through'){
         item.style.textDecoration = 'none';
         item.style.backgroundColor = '#FFFFFF';
-        //button.style.backgroundColor = 'none';
-        console.log("huheeib");
+        
+        
     }
     else {
         item.style.textDecoration = 'line-through';
-        item.style.backgroundColor = '#C59595';
+        //item.style.backgroundColor = '#C59595';
+        //item.li.style.backgroundColor = 'FFFFFF';
     }
         }
 

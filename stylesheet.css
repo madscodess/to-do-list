@@ -69,6 +69,7 @@ button:hover {
     border-color: black;
     border: 0.1rem solid;
     border-radius: 5px;
+
 }
 
 ul {
@@ -95,6 +96,7 @@ i {
 
 .todo-item {
     flex-grow: 1;
+    padding: 0px 15px;
 }
 
 .clearAll {
@@ -118,4 +120,13 @@ i {
     transform: translateX(-20rem) ;
     opacity: 0;
 }
+
+.material-symbols-rounded {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 1000,
+  'GRAD' 200,
+  'opsz' 48
+}
+
 
